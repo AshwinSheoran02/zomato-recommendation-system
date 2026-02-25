@@ -11,7 +11,41 @@ Zomato's checkout flow leaves revenue on the table — customers see generic "yo
 
 ---
 
-## 2. Why Current Systems Fail
+## 2. How to Run
+
+### Prerequisites
+
+```bash
+pip install numpy pandas faker tqdm scikit-learn lightgbm matplotlib joblib
+```
+
+### Full Pipeline (from scratch)
+
+> **⏱ Data generation takes ~10 min.** If `models/lightgbm_model.pkl` already exists, skip straight to **Step 2**.
+
+```
+ Step   Command                              What it does                  Time
+ ─────  ───────────────────────────────────  ────────────────────────────  ──────
+  0     python scripts/00_make_data.py       Generate all synthetic data   ~8 min
+  1     python scripts/01_train_model.py     Train LightGBM, save model   ~1 min
+  2     python scripts/02_evaluate_model.py  Evaluate & produce charts    ~30 s
+  3     python scripts/03_strategic_analysis.py  Segments, cold-start…    ~30 s
+```
+
+### Quick Run (model already trained)
+
+If `models/lightgbm_model.pkl` and `data/processed/training_rows.csv` are present:
+
+```bash
+python scripts/02_evaluate_model.py          # → charts in assets/figures/
+python scripts/03_strategic_analysis.py      # → strategic analysis charts
+```
+
+> **Tip:** Steps 2 and 3 are independent — run either or both.
+
+---
+
+## 3. Why Current Systems Fail
 
 | Gap | Impact |
 |-----|--------|
@@ -22,7 +56,7 @@ Zomato's checkout flow leaves revenue on the table — customers see generic "yo
 
 ---
 
-## 3. Our Solution — 5 Strategic Layers
+## 4. Our Solution — 5 Strategic Layers
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -46,7 +80,7 @@ Zomato's checkout flow leaves revenue on the table — customers see generic "yo
 
 ---
 
-## 4. Key Results
+## 5. Key Results
 
 | Metric | Baseline | Ours | Lift |
 |:-------|:--------:|:----:|:----:|
@@ -57,7 +91,7 @@ Zomato's checkout flow leaves revenue on the table — customers see generic "yo
 
 ---
 
-## 5. Architecture
+## 6. Architecture
 
 ```
 ┌──────────┐     ┌────────────────┐     ┌───────────────┐     ┌──────────────┐     ┌─────────┐
@@ -80,7 +114,7 @@ Zomato's checkout flow leaves revenue on the table — customers see generic "yo
 
 ---
 
-## Repository Structure
+## 7. Repository Structure
 
 ```
 zomato-recommendation-system/
@@ -104,27 +138,6 @@ zomato-recommendation-system/
 ├── docs/                                 # Documentation
 ├── LICENSE
 └── README.md
-```
-
----
-
-## Quick Start
-
-```bash
-# Prerequisites — Python 3.10+
-pip install numpy pandas faker tqdm scikit-learn lightgbm matplotlib joblib
-
-# Step 0 — Generate synthetic data
-python scripts/00_make_data.py
-
-# Step 1 — Train model
-python scripts/01_train_model.py
-
-# Step 2 — Evaluate model & generate charts
-python scripts/02_evaluate_model.py
-
-# Step 3 — Strategic analysis (segments, cold-start, latency)
-python scripts/03_strategic_analysis.py
 ```
 
 ---
