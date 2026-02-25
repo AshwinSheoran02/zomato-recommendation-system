@@ -2,10 +2,8 @@
 
 > **Intelligent real-time add-on recommendations that increase Average Order Value and acceptance rate at checkout.**
 
-| Report | Link |
-|--------|------|
-| **Product Report (HTML)** | [docs/product_report.html](docs/product_report.html) |
-| **Product Report (PDF)** | [docs/Zomato — Intelligent Add-On Recommendation Engine.pdf](docs/Zomato%20%E2%80%94%20Intelligent%20Add-On%20Recommendation%20Engine.pdf) |
+
+ **Product Report (PDF)** - [docs/Zomato — Intelligent Add-On Recommendation Engine.pdf](docs/Zomato%20%E2%80%94%20Intelligent%20Add-On%20Recommendation%20Engine.pdf) 
 
 ---
 
