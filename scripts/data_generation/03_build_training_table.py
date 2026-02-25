@@ -16,7 +16,7 @@ SEED = 42
 rng  = np.random.default_rng(SEED)
 np.random.seed(SEED)
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+ROOT = pathlib.Path(__file__).resolve().parent.parent.parent
 RAW  = ROOT / "data" / "raw"
 PROC = ROOT / "data" / "processed"
 PROC.mkdir(parents=True, exist_ok=True)

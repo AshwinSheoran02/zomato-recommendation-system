@@ -3,10 +3,9 @@
 =========================================================
 
 Runs all data generation steps in sequence:
-  1. setup_env.py          → install packages & create folders
-  2. 01_generate_base_tables.py → users, restaurants, items
-  3. 02_generate_orders.py      → orders, order_items
-  4. 03_build_training_table.py → training_rows, baseline
+  1. data_generation/01_generate_base_tables.py → users, restaurants, items
+  2. data_generation/02_generate_orders.py      → orders, order_items
+  3. data_generation/03_build_training_table.py → training_rows, baseline
 
 Usage:
     python scripts/00_make_data.py
@@ -17,15 +16,14 @@ import importlib
 import sys
 import pathlib
 
-# Ensure scripts/ is on the path so we can import sibling modules
+# Ensure scripts/ is on the path so we can import subpackages
 SCRIPTS_DIR = pathlib.Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPTS_DIR))
 
 STEPS = [
-    ("setup_env",               "🔧 Installing packages & creating folders"),
-    ("01_generate_base_tables",  "📋 Generating users / restaurants / items"),
-    ("02_generate_orders",       "🛒 Generating orders & order_items"),
-    ("03_build_training_table",  "🧠 Building training_rows & baseline"),
+    ("data_generation.01_generate_base_tables",  "📋 Generating users / restaurants / items"),
+    ("data_generation.02_generate_orders",       "🛒 Generating orders & order_items"),
+    ("data_generation.03_build_training_table",  "🧠 Building training_rows & baseline"),
 ]
 
 

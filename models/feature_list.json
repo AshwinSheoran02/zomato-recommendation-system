@@ -1,0 +1,12 @@
+[
+  "cart_value",
+  "cart_item_count",
+  "has_drink",
+  "has_dessert",
+  "hour_of_day",
+  "weekday",
+  "candidate_price",
+  "candidate_category",
+  "candidate_popularity",
+  "matches_user_veg_pref"
+]
