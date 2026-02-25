@@ -2,9 +2,6 @@
 data/
 *.csv
 
-# ── Model artifacts ──────────────────────────
-models/*.pkl
-
 # ── Python cache ─────────────────────────────
 __pycache__/
 *.py[cod]
