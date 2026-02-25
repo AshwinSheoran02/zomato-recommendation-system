@@ -2,6 +2,11 @@
 
 > **Intelligent real-time add-on recommendations that increase Average Order Value and acceptance rate at checkout.**
 
+| Report | Link |
+|--------|------|
+| **Product Report (HTML)** | [docs/product_report.html](docs/product_report.html) |
+| **Product Report (PDF)** | [docs/Zomato — Intelligent Add-On Recommendation Engine.pdf](docs/Zomato%20%E2%80%94%20Intelligent%20Add-On%20Recommendation%20Engine.pdf) |
+
 ---
 
 ## 1. Problem Statement
@@ -17,20 +22,20 @@ Zomato's checkout flow leaves revenue on the table — customers see generic "yo
 pip install numpy pandas faker tqdm scikit-learn lightgbm matplotlib joblib
 ```
 
-> **Already have `models/lightgbm_model.pkl`?** Skip to Step 2 — data generation takes ~10 min and **is not needed** if the model file is present.
+> **Data generation takes ~10 min.** To skip it, unzip **`data.zip`** and replace the `data/` folder with its contents — then jump straight to Step 1.
 
 ### Full Pipeline
 
 | Step | Command | What it does | Time |
 |:----:|---------|:-------------|:----:|
-| **0** | `python scripts/00_make_data.py` | Generate all synthetic data | ~8 min |
+| **0** | Unzip `data.zip` → replace `data/` **OR** `python scripts/00_make_data.py` | Get / generate synthetic data | ~8 min (generate) |
 | **1** | `python scripts/01_train_model.py` | Train LightGBM & save model | ~1 min |
 | **2** | `python scripts/02_evaluate_model.py` | Evaluate model & produce charts | ~30 s |
 | **3** | `python scripts/03_strategic_analysis.py` | Segments, cold-start, latency | ~30 s |
 
 ### Quick Run (model already exists)
 
-If **`models/lightgbm_model.pkl`** and **`data/processed/training_rows.csv`** are present, run only the evaluation & analysis:
+If **`models/lightgbm_model.pkl`** and **`data/processed/training_rows.csv`** are already present (e.g. from `data.zip`), run only the evaluation & analysis:
 
 ```bash
 python scripts/02_evaluate_model.py          # → charts in assets/figures/
@@ -131,7 +136,7 @@ zomato-recommendation-system/
 │
 ├── models/                               # lightgbm_model.pkl, feature_list.json
 ├── assets/figures/                       # All output charts
-├── docs/                                 # Documentation
+├── docs/                                 # Product report (HTML + PDF)
 ├── LICENSE
 └── README.md
 ```
