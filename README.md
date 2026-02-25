@@ -13,35 +13,31 @@ Zomato's checkout flow leaves revenue on the table — customers see generic "yo
 
 ## 2. How to Run
 
-### Prerequisites
-
 ```bash
 pip install numpy pandas faker tqdm scikit-learn lightgbm matplotlib joblib
 ```
 
-### Full Pipeline (from scratch)
+> **Already have `models/lightgbm_model.pkl`?** Skip to Step 2 — data generation takes ~10 min and **is not needed** if the model file is present.
 
-> **⏱ Data generation takes ~10 min.** If `models/lightgbm_model.pkl` already exists, skip straight to **Step 2**.
+### Full Pipeline
 
-```
- Step   Command                              What it does                  Time
- ─────  ───────────────────────────────────  ────────────────────────────  ──────
-  0     python scripts/00_make_data.py       Generate all synthetic data   ~8 min
-  1     python scripts/01_train_model.py     Train LightGBM, save model   ~1 min
-  2     python scripts/02_evaluate_model.py  Evaluate & produce charts    ~30 s
-  3     python scripts/03_strategic_analysis.py  Segments, cold-start…    ~30 s
-```
+| Step | Command | What it does | Time |
+|:----:|---------|:-------------|:----:|
+| **0** | `python scripts/00_make_data.py` | Generate all synthetic data | ~8 min |
+| **1** | `python scripts/01_train_model.py` | Train LightGBM & save model | ~1 min |
+| **2** | `python scripts/02_evaluate_model.py` | Evaluate model & produce charts | ~30 s |
+| **3** | `python scripts/03_strategic_analysis.py` | Segments, cold-start, latency | ~30 s |
 
-### Quick Run (model already trained)
+### Quick Run (model already exists)
 
-If `models/lightgbm_model.pkl` and `data/processed/training_rows.csv` are present:
+If **`models/lightgbm_model.pkl`** and **`data/processed/training_rows.csv`** are present, run only the evaluation & analysis:
 
 ```bash
 python scripts/02_evaluate_model.py          # → charts in assets/figures/
 python scripts/03_strategic_analysis.py      # → strategic analysis charts
 ```
 
-> **Tip:** Steps 2 and 3 are independent — run either or both.
+> **Steps 2 & 3 are independent** — run either or both.
 
 ---
 
