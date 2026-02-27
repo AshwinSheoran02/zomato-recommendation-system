@@ -42,6 +42,41 @@ python scripts/03_strategic_analysis.py      # → strategic analysis charts
 
 > **Steps 2 & 3 are independent** — run either or both.
 
+### Hackathon Web Demo (React + FastAPI)
+
+The repository now includes an interactive demo frontend (`frontend/`) and an inference API (`api/`).
+
+#### 1) Install additional demo dependencies
+
+```bash
+python3 -m pip install fastapi uvicorn
+cd frontend && npm install
+```
+
+#### 2) Start backend API (Terminal 1, project root)
+
+```bash
+mkdir -p .matplotlib
+MPLCONFIGDIR=.matplotlib python3 -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+```
+
+#### 3) Start React frontend (Terminal 2)
+
+```bash
+cd frontend
+npm run dev
+```
+
+Then open the URL shown by Vite (usually `http://127.0.0.1:5173`).
+
+#### 4) Demo flow for judges
+
+1. Select a restaurant and create a cart from the **Cart Builder**.
+2. Pick a scenario (cold-start / high-value / warm user).
+3. Click **Get Recommendations**.
+4. Compare **Model Recommendations** vs **Baseline Recommendations** side-by-side.
+5. Highlight the KPI cards and evaluation charts in the same screen.
+
 ---
 
 ## 3. Why Current Systems Fail
@@ -134,6 +169,8 @@ zomato-recommendation-system/
 │
 ├── models/                               # lightgbm_model.pkl, feature_list.json
 ├── assets/figures/                       # All output charts
+├── api/                                  # FastAPI inference backend for demo
+├── frontend/                             # React hackathon demo app (Vite + TS)
 ├── docs/                                 # Product report (HTML + PDF)
 ├── LICENSE
 └── README.md
