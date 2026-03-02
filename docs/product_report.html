@@ -57,8 +57,8 @@
   }
 
   /* ──────────────────── UTILITY ──────────────────── */
-  .px { padding-left: 7mm; padding-right: 7mm; }
-  .sec { padding-top: 3.5mm; padding-bottom: 3mm; }
+  .px { padding-left: 6mm; padding-right: 6mm; }
+  .sec { padding-top: 3mm; padding-bottom: 2.5mm; }
   .sec + .sec { border-top: 1px solid var(--border); }
   .sec-label {
     font-size: 6.5px; font-weight: 800; letter-spacing: 2px;
@@ -95,6 +95,7 @@
     font-size: 6.5px; font-weight: 700; letter-spacing: 1.5px;
     text-transform: uppercase; margin-bottom: 2.5mm;
   }
+  .h-pill { margin-bottom: 2mm; }
   .h-pill svg { width: 8px; height: 8px; }
   .header h1 {
     font-size: 18px; font-weight: 900; line-height: 1.15;
@@ -126,11 +127,11 @@
 
   /* ──────────────────── PROBLEM ──────────────────── */
   .problem-row {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5mm;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm;
   }
   .p-item {
     background: var(--red-light); border-radius: 6px;
-    padding: 2.5mm 3mm; border-left: 2.5px solid var(--red);
+    padding: 2mm 2.5mm; border-left: 2px solid var(--red);
   }
   .p-item strong {
     display: block; font-size: 7px; font-weight: 800; color: var(--red);
@@ -142,10 +143,10 @@
 
   /* ──────────────────── SOLUTION RIBBON ──────────────────── */
   .sol-ribbon {
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 2mm;
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5mm;
   }
   .sol-item {
-    text-align: center; padding: 2.5mm 1.5mm 2mm;
+    text-align: center; padding: 2mm 1.2mm 1.8mm;
     border-radius: 7px; background: var(--card);
     border: 1px solid var(--border); position: relative;
     overflow: hidden;
@@ -175,11 +176,11 @@
 
   /* ──────────────────── IMPACT HERO ──────────────────── */
   .impact-top {
-    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5mm;
-    margin-bottom: 2.5mm;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2mm;
+    margin-bottom: 2mm;
   }
   .imp-card {
-    border-radius: 8px; padding: 3mm 3mm 2.5mm; text-align: center;
+    border-radius: 8px; padding: 2.5mm 2.5mm 2mm; text-align: center;
     position: relative;
   }
   .imp-card.hero {
@@ -212,12 +213,12 @@
   .imp-card.hero .imp-badge { background: rgba(255,255,255,0.2); color: #fff; }
 
   .impact-bottom {
-    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.5mm;
-    margin-bottom: 2.5mm;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2mm;
+    margin-bottom: 2mm;
   }
   .imp-sm {
     background: var(--bg); border-radius: 6px;
-    padding: 2mm 2.5mm; text-align: center;
+    padding: 1.6mm 2mm; text-align: center;
   }
   .imp-sm .imp-num {
     font-size: 16px; font-weight: 800; color: var(--dark);
@@ -236,7 +237,7 @@
   .proj-card {
     background: linear-gradient(135deg, #FFFBEB 0%, #FFF8E1 100%);
     border: 1px solid #F0E0A0;
-    border-radius: 8px; padding: 2.5mm 4mm;
+    border-radius: 8px; padding: 2mm 3mm;
     display: flex; align-items: center; gap: 4mm;
   }
   .proj-tag {
@@ -264,12 +265,12 @@
 
   /* ──────────────────── WHY THIS WINS ──────────────────── */
   .wins-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 2mm;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5mm;
   }
   .win {
     display: flex; align-items: center; gap: 3px;
     background: var(--green-bg); border-radius: 5px;
-    padding: 1.8mm 2.5mm;
+    padding: 1.4mm 2mm;
   }
   .win-ck {
     width: 13px; height: 13px; border-radius: 50%;
@@ -319,13 +320,19 @@
   .b3-svg{position:absolute;bottom:0;left:0;width:100%;height:100%;z-index:1;}
   .b3-ov{position:absolute;top:0;left:0;right:0;bottom:0;display:flex;flex-direction:column;
     align-items:center;justify-content:center;z-index:2;}
-  .b3-big{font-size:30px;font-weight:900;color:var(--red);opacity:.80;line-height:1;margin-bottom:1.5mm;}
+  .b3-big{font-size:28px;font-weight:900;color:var(--red);opacity:.80;line-height:1;margin-bottom:1.2mm;}
   .b3-stat{font-size:12px;font-weight:600;color:var(--gray);opacity:.50;letter-spacing:.5px;}
-  .b3-res{font-size:3.3px;color:var(--gray);text-align:center;opacity:.70;margin-top:2.5mm;}
+  .b3-res{font-size:3.3px;color:var(--gray);text-align:center;opacity:.70;margin-top:2.2mm;}
   .b3-ft{position:absolute;bottom:2.5mm;left:5mm;right:5mm;display:flex;align-items:center;
     justify-content:space-between;z-index:3;}
   .b3-names{font-size:4.3px;color:var(--gray);font-weight:600;}
   .b3-brand{font-size:4.3px;color:var(--red);font-weight:700;letter-spacing:.3px;}
+
+  /* Mini-cards for compact evaluation sections */
+  .mini-card{background:var(--card);border:1px solid var(--border);border-radius:6px;padding:1.4mm;font-size:6.2px;color:var(--dark);}
+  .mini-card .mini-h{font-size:6px;font-weight:800;text-transform:uppercase;color:var(--red);letter-spacing:1px;margin-bottom:0.6mm}
+  .mini-card ul{margin:0;padding-left:12px}
+  .mini-card li{margin-bottom:0.5mm;line-height:1.08}
 </style>
 </head>
 <body>
@@ -471,9 +478,10 @@
         <div class="imp-lbl">Sequential Simulation</div>
       </div>
     </div>
-    <!-- Slope graph -->
-    <div class="slope-row">
-      <svg width="260" height="32" viewBox="0 0 260 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Slope graph + compact validation card -->
+    <div style="display:flex;gap:4mm;align-items:flex-start;">
+      <div class="slope-row" style="flex:1;min-width:0;">
+        <svg width="260" height="32" viewBox="0 0 260 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <!-- Baseline group -->
         <text x="16" y="22" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" font-weight="700" fill="#BBB" letter-spacing="0.5">BASELINE</text>
         <circle cx="50" cy="20" r="4" fill="#D0D0D0"/>
@@ -493,26 +501,54 @@
         <circle cx="200" cy="10" r="5" fill="#E23744"/>
         <text x="200" y="28" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="800" fill="#E23744">71.7%</text>
         <text x="240" y="13" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" font-weight="700" fill="#E23744" letter-spacing="0.5">MODEL</text>
-      </svg>
+      </div>
+      <div class="mini-card" style="width:84mm;flex-shrink:0;">
+        <div class="mini-h">VALIDATION &amp; METHODOLOGY</div>
+        <ul>
+          <li>Temporal split to prevent leakage (train earlier dates, test later dates)</li>
+          <li>Evaluate ranking quality at K (Precision@10 / Recall@10 / NDCG@10)</li>
+          <li>Segment checks (High-value vs Casual)</li>
+          <li>Cold-start check (new users vs warm users)</li>
+          <li>Error review: inspect underperforming segments and adjust features</li>
+        </ul>
+      </div>
     </div>
   </div>
 
-  <!-- ═══════════ PROJECTED IMPACT ═══════════ -->
+  <!-- ═══════════ PROJECTED IMPACT + A/B PLAN ═══════════ -->
   <div class="sec px">
-    <div class="proj-card">
-      <div class="proj-tag">Projection</div>
-      <div class="proj-items">
-        <div class="proj-item">
-          <div class="pv">₹26</div>
-          <div class="pl">uplift per order</div>
+    <div style="display:flex;gap:4mm;align-items:flex-start;">
+      <div class="proj-card" style="flex:1;min-width:0;">
+        <div class="proj-tag">Projection</div>
+        <div class="proj-items">
+          <div class="proj-item">
+            <div class="pv">₹26</div>
+            <div class="pl">uplift per order</div>
+          </div>
+          <div class="proj-item">
+            <div class="pv">₹2.6 Cr<small>/day</small></div>
+            <div class="pl">at 1M orders/day</div>
+          </div>
+          <div class="proj-item">
+            <div class="pv">₹0.80 Cr<small>/day</small></div>
+            <div class="pl">at 30% adoption (conservative)</div>
+          </div>
         </div>
-        <div class="proj-item">
-          <div class="pv">₹2.6 Cr<small>/day</small></div>
-          <div class="pl">at 1M orders/day</div>
-        </div>
-        <div class="proj-item">
-          <div class="pv">₹0.80 Cr<small>/day</small></div>
-          <div class="pl">at 30% adoption (conservative)</div>
+      </div>
+      <div class="mini-card" style="width:78mm;flex-shrink:0;">
+        <div class="mini-h">A/B Test Plan</div>
+        <div style="font-size:6.1px;line-height:1.08;color:var(--dark);">
+          <strong style="display:block;font-size:6px;margin-bottom:2px">A/B design:</strong>
+          <div style="margin-bottom:1mm">Control: Popularity baseline (current-style suggestions)<br>Treatment: ML ranker + guardrails</div>
+          <strong style="display:block;font-size:6px;margin-bottom:2px">Primary metrics:</strong>
+          <div style="margin-bottom:1mm">Add-on Acceptance Rate, Avg Order Value (AOV), Cart-to-Order (C2O)</div>
+          <strong style="display:block;font-size:6px;margin-bottom:2px">Guardrails:</strong>
+          <ul style="margin:0;padding-left:12px;margin-bottom:0">
+            <li>Latency SLA (end-to-end &lt;200ms; model scoring p95 = 1.08ms)</li>
+            <li>Cart abandonment rate must not worsen</li>
+            <li>No duplicate suggestions / diet preference respected</li>
+            <li>Price-shock cap to protect UX</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -623,9 +659,10 @@
     <div class="ft-left">
       <div>
         <div class="ft-brand">zomato</div>
-        <div class="ft-team">Ashwin Sheoran &nbsp;·&nbsp; Akshay Bhardwaj &nbsp;·&nbsp; Shreyanshu Sharma</div>
+        <div class="ft-team">Team - Token Tribe &nbsp;·&nbsp; Ashwin Sheoran &nbsp;·&nbsp; Akshay Bhardwaj &nbsp;·&nbsp; Shreyanshu Sharma</div>
       </div>
       <a class="ft-link" href="https://github.com/AshwinSheoran02/zomato-recommendation-system" target="_blank">github.com/AshwinSheoran02/zomato-recommendation-system</a>
+      <div style="font-size:5px;color:var(--faint);margin-left:6mm;margin-top:2px">Submission links (public): <a class="ft-link" href="https://github.com/AshwinSheoran02/zomato-recommendation-system" target="_blank">GitHub repo</a> &middot; <a class="ft-link" href="../data.zip" target="_blank">dataset.zip</a> &middot; reproducible scripts/notebooks</div>
     </div>
     <div class="ft-right">
       <div class="ft-zomathon">Zomathon 2026</div>
