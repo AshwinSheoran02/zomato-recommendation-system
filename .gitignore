@@ -31,6 +31,7 @@ desktop.ini
 venv/
 .env/
 env/
+.matplotlib/
 
 # ── Archive (old notebooks / scripts) ────────
 archive/

@@ -1,0 +1,267 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(165deg, #fff8f8 0%, #fff 50%, #fff5f6 100%);
+  color: #221f1f;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero {
+  background: #161616;
+  color: #fff;
+  border-radius: 20px;
+  padding: 1.4rem 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero h1 {
+  margin: 0.2rem 0 0.6rem;
+  line-height: 1.2;
+  font-size: 1.85rem;
+}
+
+.hero .muted {
+  color: #efe9e9;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: #f9afb8;
+  margin: 0;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-stats span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #f3d9dc;
+  border-radius: 16px;
+  padding: 1.1rem;
+  box-shadow: 0 10px 30px rgba(239, 79, 95, 0.08);
+}
+
+.card h2 {
+  margin: 0 0 0.65rem;
+  font-size: 1.05rem;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.8rem;
+}
+
+.kpi-item {
+  background: #fff9f9;
+  border: 1px solid #f7d4d8;
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.kpi-item h3 {
+  margin: 0 0 0.4rem;
+  font-size: 0.98rem;
+}
+
+.kpi-item p {
+  margin: 0.25rem 0;
+  font-size: 0.92rem;
+}
+
+.kpi-item span {
+  color: #656161;
+}
+
+.lift {
+  color: #00a35a;
+  font-weight: 700;
+}
+
+.muted {
+  color: #6d6565;
+  margin: 0 0 0.6rem;
+}
+
+.error-banner {
+  margin: 0;
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 0.7rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.86rem;
+  color: #615c5c;
+}
+
+select,
+input {
+  border: 1px solid #e8d0d4;
+  border-radius: 10px;
+  padding: 0.56rem 0.65rem;
+  font-size: 0.92rem;
+  background: #fff;
+}
+
+.scenario-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.8rem 0;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.55rem 0.82rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background: #ef4f5f;
+  color: #fff;
+}
+
+.ghost {
+  background: #fff3f4;
+  color: #9e3f49;
+  border: 1px solid #f5c9cf;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+.chip {
+  text-align: left;
+  background: #fff;
+  border: 1px solid #f2d5d9;
+  color: #3b3636;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.chip small {
+  color: #766f6f;
+}
+
+.chip.active {
+  border-color: #ef4f5f;
+  background: #fff4f5;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #f2e5e6;
+  white-space: nowrap;
+}
+
+th {
+  color: #716d6d;
+  font-size: 0.82rem;
+}
+
+.mini-chart {
+  margin-top: 0.7rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.8rem;
+}
+
+.chart-item {
+  margin: 0;
+  border: 1px solid #f5d8db;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.chart-item img {
+  width: 100%;
+  display: block;
+}
+
+.chart-item figcaption {
+  font-size: 0.82rem;
+  color: #6c6767;
+  padding: 0.5rem 0.6rem;
+  background: #fff9fa;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 1.45rem;
+  }
+}
